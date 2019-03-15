@@ -5,11 +5,13 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
-const htmlPlugin = new HtmlWebPackPlugin({  template: "public/index.html", filename: "index.html" });
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const htmlPlugin = new HtmlWebPackPlugin({ template: "public/index.html", filename: "index.html" });
 const cssPlugin = new MiniCssExtractPlugin({ filename: '[name].css' });
 const cleanPlugin = new CleanWebpackPlugin(['dist']);
 const generateSWPlugin = new WorkboxPlugin.GenerateSW({ clientsClaim: true, skipWaiting: true });
 const uglifyPlugin = new UglifyJsPlugin({ cache: true, parallel: true, sourceMap: true });
+const copyPlugin = new CopyWebpackPlugin([{ from: 'assets/js' }, { from: 'public/logo@16x16.png' }, { from: 'public/logo@32x32.png' }, { from: 'public/logo@180x180.png' }]);
 
 module.exports = {
     entry: './src/index.js',
@@ -87,7 +89,7 @@ module.exports = {
     optimization: {
         minimizer: [uglifyPlugin, new OptimizeCSSAssetsPlugin({})]
     },
-    plugins: [cleanPlugin, htmlPlugin, cssPlugin, generateSWPlugin],
+    plugins: [cleanPlugin, htmlPlugin, cssPlugin, generateSWPlugin, copyPlugin],
     resolve: {
         extensions: ['.js', '.jsx', '.css'],
     },
