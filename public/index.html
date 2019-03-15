@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/" />
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>~/asifvora.tk/main.ts</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./logo@180x180.png">
+    <link rel="icon" type="image/png" href="./logo@32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="./logo@16x16.png" sizes="16x16">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css" />
+</head>
+
+<body>
+    <noscript>
+        Please enable JavaScript to see this page!
+    </noscript>
+    <div class="loader hidden">
+        <div class="line">
+            <span>
+                Last login: <span class="now"></span> on ttys007
+            </span>
+        </div>
+        <div class="line">
+            <span class="path">~/asifvora.tk</span>
+            <span class="branch"> master</span>
+            <span class="command"></span>
+            <span class="args"></span>
+        </div>
+    </div>
+    <div id="root" class="hidden"></div>
+</body>
+<script src="../assets/js/main.js"></script>
+<script type="text/javascript">
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js').then(registration => {
+                console.log('SW registered');
+            }).catch(registrationError => {
+                console.log('SW registration failed: ', registrationError);
+            });
+        });
+    }
+</script>
+
+</html>
