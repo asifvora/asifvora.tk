@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import { Line } from '../Line';
 import { VariableName } from '../VariableName';
+import { formatCode } from '../../utils/utils';
 
 export default class Variable extends Component {
     render() {
@@ -13,10 +14,11 @@ export default class Variable extends Component {
                 <VariableName displayKey={this.props.displayKey} />
                 <span className="keyword">=</span>
                 <span className="white-space space"></span>
-                <span className="string">
-                    {this.props.isLink && <a href={this.props.displayValue} target="_blank">{this.props.displayValue}</a>}
-                    {!this.props.isLink && this.props.displayValue}
-                </span>
+                {this.props.isLink && <span className="string">
+                    <a href={this.props.displayValue} target="_blank">{this.props.displayValue}</a>
+                </span>}
+                {!this.props.isLink && <span className="string" dangerouslySetInnerHTML={{ __html: formatCode(this.props.displayValue) }} />}
+                {/* {!this.props.isLink && <span className="string" dangerouslySetInnerHTML={formatCode(this.props.displayValue)}> </span>} */}
                 <span className="expression" >;</span>
             </Line >
         );
