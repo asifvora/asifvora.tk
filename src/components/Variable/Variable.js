@@ -11,15 +11,14 @@ export default class Variable extends Component {
             <Line>
                 <span className="storage-type">const</span>
                 <span className="white-space space"></span>
-                <VariableName displayKey={this.props.displayKey} />
+                <VariableName displayKey={this.props.displayKey} length={this.props.length} />
                 <span className="keyword">=</span>
                 <span className="white-space space"></span>
-                {this.props.isLink && <span className="string">
+                {this.props.isLink && this.props.displayValue && <span className="string">
                     <a href={this.props.displayValue} target="_blank">{this.props.displayValue}</a>
                 </span>}
-                {!this.props.isLink && <span className="string" dangerouslySetInnerHTML={{ __html: formatCode(this.props.displayValue) }} />}
-                {/* {!this.props.isLink && <span className="string" dangerouslySetInnerHTML={formatCode(this.props.displayValue)}> </span>} */}
-                <span className="expression" >;</span>
+                {!this.props.isLink && this.props.displayValue && <span className="string" dangerouslySetInnerHTML={{ __html: formatCode(this.props.displayValue) }} />}
+                {this.props.displayValue && <span className="expression" >;</span>}
             </Line >
         );
     }
