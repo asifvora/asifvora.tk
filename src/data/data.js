@@ -80,7 +80,9 @@ const skills = {
 *************/
 const educations = [
     {
-        school: 'L.J. Institute Of Engineering and Technology, Ahemedabad (Gujarat Technological University)',
+        school: 'L.J. Institute Of Engineering and Technology',
+        university: 'Gujarat Technological University',
+        location: 'Ahemedabad',
         degree: `Master's degree`,
         study: 'MCA',
         grade: '8.21 CGPA',
@@ -88,7 +90,9 @@ const educations = [
         endsAt: new Date('2017'),
     },
     {
-        school: 'L.N.Patel College of COMP & MANAG, Kalyanpura (Hemchandracharya North Gujarat University)',
+        school: 'L.N.Patel College of COMP & MANAG',
+        university: 'Hemchandracharya North Gujarat University',
+        location: 'Kalyanpura',
         degree: `Bachelor's degree`,
         study: 'BCA',
         grade: '84.66%',
@@ -96,7 +100,9 @@ const educations = [
         endsAt: new Date('2015'),
     },
     {
-        school: 'Shree Madhymikshala, Viramgam (GHSEB)',
+        school: 'Shree Madhymikshala',
+        university: 'GHSEB',
+        location: 'Viramgam',
         degree: 'HSC',
         study: '12th Commerce',
         grade: '67.14 %',
@@ -104,9 +110,11 @@ const educations = [
         endsAt: new Date('2012'),
     },
     {
-        school: 'New Education High School, Viramgam (GSEB)',
+        school: 'New Education High School',
+        university: 'GSEB',
+        location: 'Viramgam',
         degree: 'SSC',
-        study: '10th SSC',
+        study: '10th',
         grade: '59.38 %',
         startsAt: new Date('2009'),
         endsAt: new Date('2010'),
