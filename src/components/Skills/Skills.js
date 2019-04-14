@@ -22,12 +22,10 @@ export default class Skills extends Component {
 
     render() {
         return (
-            <div className="skillset">
-                <Line />
+            <Fragment>
                 <Section activeSection={'Skills'} />
-                <Line />
                 {this.skills()}
-            </div >
+            </Fragment>
         );
     }
 }

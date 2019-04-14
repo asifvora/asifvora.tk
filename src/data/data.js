@@ -86,8 +86,8 @@ const educations = [
         degree: `Master's degree`,
         study: 'MCA',
         grade: '8.21 CGPA',
-        startsAt: new Date('2015'),
-        endsAt: new Date('2017'),
+        startsAt: '2015',
+        endsAt: '2017',
     },
     {
         school: 'L.N.Patel College of COMP & MANAG',
@@ -96,8 +96,8 @@ const educations = [
         degree: `Bachelor's degree`,
         study: 'BCA',
         grade: '84.66%',
-        startsAt: new Date('2012'),
-        endsAt: new Date('2015'),
+        startsAt: '2012',
+        endsAt: '2015',
     },
     {
         school: 'Shree Madhymikshala',
@@ -106,8 +106,8 @@ const educations = [
         degree: 'HSC',
         study: '12th Commerce',
         grade: '67.14 %',
-        startsAt: new Date('2010'),
-        endsAt: new Date('2012'),
+        startsAt: '2010',
+        endsAt: '2012',
     },
     {
         school: 'New Education High School',
@@ -116,8 +116,8 @@ const educations = [
         degree: 'SSC',
         study: '10th',
         grade: '59.38 %',
-        startsAt: new Date('2009'),
-        endsAt: new Date('2010'),
+        startsAt: '2009',
+        endsAt: '2010',
     }
 ];
 
@@ -128,29 +128,20 @@ const educations = [
 const experience = [
     {
         company: 'Multidots Solutions Pvt Ltd',
-        description: `
-        I am working as a JavaScript Developer for building websites, 
-        mobile applications(React Native) and web applications.
-      `,
-        startsAt: new Date('2017-07-01'),
-        endsAt: undefined,
         remote: false,
-        position: [
-            'JavaScript Developer'
-        ]
+        position: 'JavaScript Developer',
+        description: `I am working as a JavaScript Developer for building web applications.`,
+        startsAt: '2017-07-01',
+        endsAt: undefined,
     },
     {
         company: 'Multidots Solutions Pvt Ltd',
-        description: `
-        Project trainee.
-       `,
-        startsAt: new Date('2017-01-02'),
-        endsAt: new Date('2017-06-30'),
         remote: false,
-        position: [
-            'Project Trainee'
-        ]
-    },
+        position: 'Project Trainee',
+        description: `Project trainee.`,
+        startsAt: '2017-01-02',
+        endsAt: '2017-06-30',
+    }
 ];
 
 
@@ -160,18 +151,28 @@ const experience = [
 
 const projects = [
     {
-        name: 'Test',
-        description: `
-        Squoint is a puzzle game which is optimized for mobile devices and touch
-        gestures. The game is currently in closed beta and will be launched soon.
-      `,
-        startsAt: new Date('2017'),
+        name: 'My Website',
+        url: 'https://asifvora.netlify.com',
+        description: `My personal website`,
+        startsAt: '2019',
         endsAt: undefined,
-        urls: [],
-        media: [],
         skills: {
+            react,
+            webpack
         },
     },
+    {
+        name: 'Sound Base',
+        url: 'https://soundbase.netlify.com',
+        description: `Soundbase music web application.`,
+        startsAt: '2018',
+        endsAt: undefined,
+        skills: {
+            react,
+            redux,
+            webpack
+        },
+    }
 ];
 
 
