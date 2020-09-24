@@ -5,10 +5,10 @@ const sectionTypes = ['Profile', 'Skills', 'Educations', 'Experience', 'Projects
 *********/
 
 const profile = {
-    myName: 'asifvora',
-    profession: 'Software Engineer',
+    myName: 'Asif Vora',
+    profession: 'Sr. Software Engineer',
     email: 'asifvora0@gmail.com',
-    city: 'viramgam',
+    city: 'Viramgam',
     postalCode: '382150'
 };
 
@@ -32,6 +32,9 @@ const scss = { level: 1.0, name: 'SCSS' };
 const jquery = { level: 1.0, name: 'jQuery' };
 const bootstrap = { level: 1.0, name: 'Bootstrap' };
 const sc = { level: 0.7, name: 'Styled Component' };
+const lerna = { level: 0.7, name: 'Lerna' };
+const microFrontEnd = { level: 0.7, name: 'Micro-frontend' };
+
 
 const js = { level: 1.0, name: 'JavaScript' };
 const es = { level: 1.0, name: 'ES6' };
@@ -65,7 +68,7 @@ const fb = { level: 0.8, name: 'Firebase' };
 const fs = { level: 0.8, name: 'Full Story' };
 const intercom = { level: 0.8, name: 'Intercom' };
 const mp = { level: 0.8, name: 'Mix Panel' };
-const ga  = { level: 0.8, name: ' Google Analytics' };
+const ga  = { level: 0.8, name: 'Google Analytics' };
 
 const php = { level: 0.7, name: 'PHP' };
 const cakephp = { level: 0.7, name: 'Cake PHP' };
@@ -77,11 +80,17 @@ const sourcetree = { level: 1, name: 'Source Tree' };
 const adbphotoshop = { level: 0.7, name: 'Adobe Photoshop' };
 const adbdesign = { level: 0.7, name: 'Adobe InDesign' };
 
+const unitTesting = { level: 1, name: 'Unit Testing' };
+const Jest = { level: 0.7, name: 'Jest' };
+const reactTesting = { level: 0.7, name: 'React Testing' };
+const i18 = { level: 0.7, name: 'i18' };
+
+
 const skills = {
-    html, css, scss, bootstrap, sc, jquery, js, es, react, redux,
+    html, css, scss, bootstrap, sc, lerna,microFrontEnd, jquery, js, es, react, redux,
     rn,electron, mobX, vuejs, vuex, ng, typescript, webpack, sw, mern, node, express, sails,
     websockets, pusher, ionic, lambda, api, gql, realmdb, mysql, mongodb, psql, fb, fs, intercom, mp, ga,
-    php, cakephp, git, svn, bb, sourcetree, adbphotoshop, adbdesign
+    php, cakephp, git, svn, bb, sourcetree, adbphotoshop, adbdesign, unitTesting, Jest, reactTesting, i18
 };
 
 
@@ -139,10 +148,18 @@ const experience = [
     {
         company: 'Simform Solutions',
         remote: false,
+        position: 'Sr. Software Engineer',
+        description: `I am working as a Sr. Software Engineer for building web applications.`,
+        startsAt: '2020-01-01',
+        endsAt: undefined,
+    },
+    {
+        company: 'Simform Solutions',
+        remote: false,
         position: 'Software Engineer',
         description: `I am working as a Software Engineer for building web applications.`,
         startsAt: '2019-06-18',
-        endsAt: undefined,
+        endsAt: '2019-12-31',
     },
     {
         company: 'Multidots Solutions Pvt Ltd',
