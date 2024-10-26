@@ -172,7 +172,7 @@ const experience = [
     {
         company: 'Multidots Solutions Pvt Ltd',
         remote: false,
-        position: 'Project Trainee',
+        position: 'Project Intern',
         description: `Project trainee.`,
         startsAt: '2017-01-02',
         endsAt: '2017-06-30',
